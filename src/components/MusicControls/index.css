@@ -1,0 +1,164 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.music-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.img-css {
+    height: 380px;
+    width: 380px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+.seek-bar {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: rgba(114, 115, 116, 0.23);
+    border-radius: 5px;
+    outline: none;
+    overflow: hidden;
+}
+
+.seek-bar::-webkit-slider-runnable-track {
+    background: rgba(114, 115, 116, 0.23);
+}
+
+.seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.seek-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.seek-bar::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+
+.seek-bar::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, white 0%, white var(--seek-value), rgba(114, 115, 116, 0.23) var(--seek-value), rgba(114, 115, 116, 0.23) 100%);
+}
+
+
+.button-back {
+    background-color: transparent;
+    border: none;
+}
+
+.volume-back {
+    background-color: rgba(114, 115, 116, 0.23);
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+.textalin {
+    text-align: left;
+    width: 100%;
+}
+
+.colo {
+    color: black;
+}
+
+.artist-colo {
+    color: #868383;
+}
+
+
+@media (max-width: 768px) {
+    .img-css {
+        height: 250px;
+        width: 250px;
+    }
+
+    .seek-bar {
+        height: 4px;
+    }
+
+    .button-back {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .img-css {
+        height: 180px;
+        width: 180px;
+    }
+
+    .seek-bar {
+        height: 3px;
+    }
+
+    .button-back {
+        font-size: 12px;
+    }
+
+    .volume-back {
+        width: 40px;
+        height: 40px;
+    }
+
+    .button-back {
+        width: 40px;
+        height: 40px;
+    }
+
+    .music-controls {
+        padding: 0.5rem;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .button-back.d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-back .btn {
+        margin: 0.5rem 0;
+    }
+}
